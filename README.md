@@ -142,7 +142,7 @@ brands/        your workspaces (git-ignored — client data never committed)
 ```
 
 ## About
-Built by [Talha Siddique](https://linkedin.com/in/talha-siddique) — Senior Full Stack Engineer and I build grounded, no-nonsense production AI systems ([atelic.ai](https://atelic.ai)). This suite is free and MIT-licensed; use it for your own brand, client work, or ventures. Issues and PRs welcome; star it if it saved you a subscription.
+Built by [Talha Siddique](https://linkedin.com/in/talha-siddique) — Senior Full Stack Engineer and I build grounded, no-nonsense production AI systems. This suite is free and MIT-licensed; use it for your own brand, client work, or ventures. Issues and PRs welcome; star it if it saved you a subscription.
 
 ## License
 [MIT](./LICENSE).
