@@ -1,0 +1,94 @@
+{
+  "brand": "driftroast",
+  "domain": "driftroast.com",
+  "generated": "2026-07-02",
+  "central_entity": {
+    "name": "specialty coffee",
+    "type": "product category",
+    "wikidata_qid": null,
+    "typing": {
+      "value": "specialty coffee",
+      "provenance": "asserted",
+      "note": "subject, not brand name; type by judgement at T0"
+    }
+  },
+  "source_context": {
+    "what": "online store selling single-origin beans + home brewing gear; subscription; founder is a licensed Q-grader",
+    "audience": [
+      "home coffee enthusiasts",
+      "gift buyers",
+      "new espresso owners"
+    ],
+    "monetization": "product sales + bean subscription",
+    "will_not_cover": [
+      "general productivity",
+      "unrelated kitchen appliances",
+      "diet fads"
+    ]
+  },
+  "central_intent": "Help home enthusiasts choose, buy, and brew better specialty coffee and convert to purchase/subscription.",
+  "core_outer_boundary": {
+    "core_definition": "Topics that move a reader toward buying beans/gear within 1-2 steps: brewing methods using gear sold, bean selection/buying, grind/dose/ratio how-tos, equipment comparisons, subscription value.",
+    "outer_definition": "Credibility/top-of-funnel: coffee history, origin/terroir, caffeine science, cafe-business basics - linking down to core."
+  },
+  "personas": [
+    {
+      "name": "New espresso owner",
+      "needs": [
+        "dial-in help",
+        "gear guidance"
+      ],
+      "sophistication": "beginner"
+    },
+    {
+      "name": "Pour-over hobbyist",
+      "needs": [
+        "technique depth",
+        "bean recommendations"
+      ],
+      "sophistication": "intermediate"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Blue Bottle",
+      "domain": "bluebottlecoffee.com",
+      "note": "specialty roaster/subscription",
+      "provenance": "asserted"
+    },
+    {
+      "name": "Trade Coffee",
+      "domain": "drinktrade.com",
+      "note": "bean marketplace/subscription",
+      "provenance": "asserted"
+    }
+  ],
+  "attribute_inventory": [
+    {
+      "attribute": "bean origin",
+      "attr_type": "defining",
+      "value": {
+        "value": "single-origin",
+        "provenance": "asserted"
+      }
+    },
+    {
+      "attribute": "roast level",
+      "attr_type": "defining",
+      "value": {
+        "value": "light-medium",
+        "provenance": "asserted",
+        "note": "confirm actual range in locked-facts"
+      }
+    },
+    {
+      "attribute": "subscription",
+      "attr_type": "unique",
+      "value": {
+        "value": null,
+        "provenance": "asserted",
+        "note": "pricing UNKNOWN - do not state until confirmed"
+      }
+    }
+  ]
+}

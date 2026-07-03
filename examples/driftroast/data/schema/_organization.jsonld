@@ -1,0 +1,11 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "driftroast",
+      "url": "https://driftroast.com",
+      "description": "online store selling single-origin beans + home brewing gear; subscription; founder is a licensed Q-grader"
+    }
+  ]
+}

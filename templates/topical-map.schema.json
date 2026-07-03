@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "topical-map.schema.json",
+  "title": "Topical Map",
+  "type": "object",
+  "required": ["central_entity", "nodes", "generated"],
+  "definitions": {
+    "pvalue": {
+      "type": "object",
+      "required": ["value", "provenance"],
+      "properties": {
+        "value": {},
+        "provenance": {"enum": ["measured", "derived", "asserted"]},
+        "source": {"type": "string"},
+        "observed": {"type": "string"},
+        "inputs": {"type": "array", "items": {"type": "string"}},
+        "method": {"type": ["string", "null"]},
+        "note": {"type": ["string", "null"]}
+      }
+    }
+  },
+  "properties": {
+    "central_entity": {"type": "object"},
+    "generated": {"type": "string"},
+    "grounding_tier": {"enum": ["t0", "t1", "t2", "mixed"]},
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "tier", "section", "intent", "status"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^n-[0-9]{3,}$"},
+          "title": {"type": "string"},
+          "tier": {"enum": ["pillar", "cluster", "supporting"]},
+          "section": {"enum": ["core", "outer"]},
+          "parent": {"type": ["string", "null"]},
+          "target_query": {"type": "string"},
+          "query_network": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["query", "provenance"],
+              "properties": {
+                "query": {"type": "string"},
+                "provenance": {"enum": ["measured", "derived", "asserted"]},
+                "source": {"type": "string"}
+              }
+            }
+          },
+          "intent": {"enum": ["informational", "commercial", "transactional", "navigational"]},
+          "intent_provenance": {"enum": ["measured", "derived", "asserted"]},
+          "entities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["entity"],
+              "properties": {
+                "entity": {"type": "string"},
+                "attributes": {"type": "array", "items": {"type": "string"}}
+              }
+            }
+          },
+          "volume": {"oneOf": [{"$ref": "#/definitions/pvalue"}, {"type": "null"}]},
+          "difficulty": {"oneOf": [{"$ref": "#/definitions/pvalue"}, {"type": "null"}]},
+          "priority_score": {"oneOf": [{"$ref": "#/definitions/pvalue"}, {"type": "null"}]},
+          "status": {"enum": ["planned", "briefed", "drafted", "published", "needs-update"]},
+          "url": {"type": ["string", "null"]},
+          "internal_links": {
+            "type": "object",
+            "properties": {
+              "up": {"type": "array", "items": {"type": "string"}},
+              "down": {"type": "array", "items": {"type": "string"}},
+              "lateral": {"type": "array", "items": {"type": "string"}}
+            }
+          },
+          "history": {"type": "array", "items": {"type": "object"}}
+        }
+      }
+    }
+  }
+}

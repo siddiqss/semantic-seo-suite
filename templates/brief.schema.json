@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "brief.schema.json",
+  "title": "Content Brief",
+  "type": "object",
+  "required": ["node_id", "target_query", "intent", "outline", "generated"],
+  "properties": {
+    "node_id": {"type": "string"},
+    "target_query": {"type": "string"},
+    "intent": {"enum": ["informational", "commercial", "transactional", "navigational"]},
+    "generated": {"type": "string"},
+    "snippet_target": {"type": "string", "description": "The answer the lead should win as a featured snippet / AI citation"},
+    "outline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["level", "heading", "must_cover"],
+        "properties": {
+          "level": {"enum": ["H1", "H2", "H3"]},
+          "heading": {"type": "string"},
+          "tag": {"type": "string", "description": "entity:X | attr:Y | rel:Z | q:question"},
+          "must_cover": {"type": "array", "items": {"type": "string"}},
+          "word_budget": {"type": ["integer", "null"]}
+        }
+      }
+    },
+    "entities_required": {"type": "array", "items": {"type": "string"}},
+    "internal_links": {
+      "type": "object",
+      "properties": {
+        "up": {"type": "array", "items": {"type": "string"}},
+        "down": {"type": "array", "items": {"type": "string"}},
+        "lateral": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "locked_facts_refs": {"type": "array", "items": {"type": "string"}, "description": "keys from locked-facts.json this article may state"},
+    "do_not_fabricate": {"type": "array", "items": {"type": "string"}, "description": "specs/stats/prices the writer must NOT invent"},
+    "intent_conflicts": {"type": "array", "items": {"type": "object"}}
+  }
+}

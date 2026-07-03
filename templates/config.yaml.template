@@ -1,0 +1,48 @@
+# =============================================================================
+# Semantic SEO Suite — brand config
+# Copy this file to brands/<slug>/config.yaml and fill it in.
+# Skills read this FIRST on every run to decide grounding behaviour.
+# =============================================================================
+
+brand: yourbrand                         # slug; must match the folder name in brands/
+domain: yourbrand.com                    # bare domain, no scheme
+central_entity: "AI UGC video ad generator"   # refined by seo-brand-foundation
+
+market:
+  language: en                         # ISO 639-1
+  country: US                          # ISO 3166-1 alpha-2
+
+# -----------------------------------------------------------------------------
+# Grounding. tier sets the default posture; sources can override individually so
+# you can mix (e.g. tier t0 but embeddings: local). A skill NEVER fails because a
+# source is off — it degrades and labels its output's provenance accordingly.
+# -----------------------------------------------------------------------------
+grounding:
+  tier: t0                             # t0 | t1 | t2 | mixed
+  sources:
+    web_search: true                   # T0  — always available in-session
+    autocomplete: false                # T1  — Google Suggest expansions
+    wikidata: false                    # T1  — entity typing / attributes
+    trends: false                      # T1  — pytrends relative demand
+    embeddings: none                   # T1  — local | none (sentence-transformers)
+    crawl: false                       # T1  — sitemap + page extraction
+    gsc: false                         # T1  — Google Search Console (needs OAuth)
+    dataforseo: false                  # T2  — search volume / SERP / difficulty
+  credentials:
+    gsc_credentials_path: null         # path to OAuth client/service-account json
+    # DataForSEO creds are read from env only (DATAFORSEO_LOGIN / DATAFORSEO_PASSWORD),
+    # never stored in this file.
+
+# -----------------------------------------------------------------------------
+# Tuning knobs (sensible defaults; override per brand/niche).
+# -----------------------------------------------------------------------------
+tuning:
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2   # or a Qwen3-Embedding variant
+  cannibalization_threshold: 0.86      # cosine sim above which sibling nodes are flagged
+  lateral_link_threshold: 0.72         # min sim to justify a lateral internal link
+  crawl_max_pages: 500                 # cap for large sites
+  crawl_max_depth: 3
+
+publishing:
+  cms: none                            # none | wordpress | markdown-export
+  cadence_per_week: 3                  # feeds calendar prioritisation

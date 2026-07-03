@@ -1,0 +1,7 @@
+brand: driftroast
+domain: driftroast.com
+central_entity: "specialty coffee"
+market: { language: en, country: US }
+grounding: { tier: t0, sources: { web_search: true, autocomplete: false, wikidata: false, trends: false, embeddings: none, crawl: false, gsc: false, dataforseo: false }, credentials: { gsc_credentials_path: null } }
+tuning: { embedding_model: sentence-transformers/all-MiniLM-L6-v2, cannibalization_threshold: 0.86, lateral_link_threshold: 0.72, crawl_max_pages: 500, crawl_max_depth: 3 }
+publishing: { cms: none, cadence_per_week: 2 }

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "locked-facts.schema.json",
+  "title": "Locked Facts",
+  "description": "The verified-claims ledger. The draft validator rejects any brand claim not present here.",
+  "type": "object",
+  "required": ["brand", "facts"],
+  "properties": {
+    "brand": {"type": "string"},
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "value", "source", "verified_date"],
+        "properties": {
+          "key": {"type": "string", "description": "stable id, e.g. pricing.starter_monthly"},
+          "statement": {"type": "string", "description": "human-readable claim"},
+          "value": {},
+          "source": {"type": "string", "description": "where it was verified (url, doc, user confirmation)"},
+          "verified_date": {"type": "string"},
+          "expires": {"type": ["string", "null"], "description": "optional re-verify-by date for volatile facts like price"}
+        }
+      }
+    }
+  }
+}

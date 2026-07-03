@@ -1,0 +1,3 @@
+{"skill_name":"linking-and-schema","evals":[
+ {"id":1,"prompt":"Give me the internal linking plan and JSON-LD schema for the driftroast topical map.","expected_output":"A link checklist (up/down/justified-lateral, varied anchors, orphan/over-link flags) and one JSON-LD file per node + Organization graph, 0 validation issues, Product Offer only if a locked price exists.","assertions":[{"text":"every node has a link entry; laterals justified","name":"links_justified"},{"text":"anchors are varied (not exact-match repetition)","name":"varied_anchors"},{"text":"JSON-LD validates (has @context/@type) with 0 issues","name":"jsonld_valid"},{"text":"no Product Offer price without a locked fact","name":"no_fake_price"}]}
+]}

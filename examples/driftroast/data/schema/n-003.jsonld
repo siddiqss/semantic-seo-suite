@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Espresso brewing basics",
+  "url": "https://driftroast.com/n-003",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "espresso grind size",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<answer from draft>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "9 bar pressure",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<answer from draft>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "dose ratio espresso",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<answer from draft>"
+      }
+    }
+  ]
+}

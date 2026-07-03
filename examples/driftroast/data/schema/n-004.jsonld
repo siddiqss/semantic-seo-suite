@@ -1,0 +1,24 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "name": "Sour espresso: causes and fixes",
+  "url": "https://driftroast.com/n-004",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "under extraction espresso",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<answer from draft>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "fix sour shot",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<answer from draft>"
+      }
+    }
+  ]
+}

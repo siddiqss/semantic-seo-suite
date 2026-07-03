@@ -1,0 +1,3 @@
+{"skill_name":"content-brief-generator","evals":[
+ {"id":1,"prompt":"Generate a content brief for the node 'how to make pour-over coffee' in the driftroast topical map.","expected_output":"A brief validating against brief.schema.json: one macro context, contextual-vector-ordered outline with entity/attr/rel tags, snippet target, internal links with varied anchors, do_not_fabricate list, intent-conflict check.","assertions":[{"text":"brief validates against brief.schema.json","name":"schema_valid"},{"text":"outline is ordered definition->attributes->how-to->comparison->questions","name":"vector_order"},{"text":"do_not_fabricate names unverified specs/prices","name":"do_not_fab"},{"text":"snippet_target is present and ~40 words","name":"snippet"}]}
+]}

@@ -1,0 +1,3 @@
+{"skill_name":"seo-performance-tracker","evals":[
+ {"id":1,"prompt":"How is driftroast's content performing? Pull Search Console and tell me what to update next.","expected_output":"A performance report with per-pillar rollups, striking-distance queries, measured cannibalization, decaying pages, uncovered-query candidates; every figure measured/derived; actions fed back to map+calendar.","assertions":[{"text":"pillar rollups are derived from measured GSC rows","name":"rollups_measured"},{"text":"striking-distance = positions 5-15","name":"striking_range"},{"text":"if GSC not configured, honest 'unavailable' with no invented metrics","name":"honest_degrade"}]}
+]}

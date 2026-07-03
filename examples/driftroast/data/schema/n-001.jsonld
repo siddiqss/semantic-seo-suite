@@ -1,0 +1,9 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "name": "Coffee brewing methods",
+  "url": "https://driftroast.com/n-001",
+  "about": [
+    "coffee brewing"
+  ]
+}

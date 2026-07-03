@@ -1,0 +1,47 @@
+{
+  "brand": "driftroast",
+  "_note": "DriftRoast is a FICTIONAL demo brand (specialty coffee). These facts are illustrative sample data used to demonstrate the locked-facts + fabrication-guard mechanism; the 'sources' are representative, not a live audit.",
+  "facts": [
+    {
+      "key": "brew.ratio",
+      "statement": "A common pour-over starting ratio is 1:16 coffee to water — roughly 60 g of coffee per litre.",
+      "value": "1:16 (about 60 g per litre)",
+      "source": "Specialty Coffee Association brewing guidelines (representative)",
+      "verified_date": "2026-07-04",
+      "expires": "2027-07-04"
+    },
+    {
+      "key": "brew.water_temp",
+      "statement": "Brew water for pour-over should sit between 195-205°F (about 90-96°C).",
+      "value": "195-205°F",
+      "source": "Specialty Coffee Association brewing guidelines (representative)",
+      "verified_date": "2026-07-04",
+      "expires": "2027-07-04"
+    },
+    {
+      "key": "brew.grind",
+      "statement": "Pour-over uses a medium-fine grind, roughly the texture of table salt.",
+      "value": "medium-fine (table-salt texture)",
+      "source": "DriftRoast brewing guide (demo)",
+      "verified_date": "2026-07-04",
+      "expires": "2027-07-04"
+    },
+    {
+      "key": "brew.bloom",
+      "statement": "Start with a 30-45 second bloom, pouring about twice the coffee's weight in water to let gases escape.",
+      "value": "30-45s bloom, ~2x coffee weight",
+      "source": "DriftRoast brewing guide (demo)",
+      "verified_date": "2026-07-04",
+      "expires": "2027-07-04"
+    },
+    {
+      "key": "brand.freshness",
+      "statement": "DriftRoast roasts to order and ships beans within 48 hours of roasting.",
+      "value": "roast-to-order; ships within 48 hours",
+      "source": "driftroast.com (demo brand fact)",
+      "verified_date": "2026-07-04",
+      "expires": "2027-07-04"
+    }
+  ],
+  "_pending_owner_confirmation": []
+}

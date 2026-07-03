@@ -1,0 +1,16 @@
+# User brand workspaces — never committed (your + client data lives here).
+# The shipped, runnable demo is in examples/driftroast/ instead.
+/brands/*
+!/brands/.gitkeep
+!/brands/README.md
+
+# Secrets & credentials (keys live in env / .env only, never in the repo)
+.env
+*.token.json
+*credentials*.json
+
+# Build + Python + OS artifacts
+dist/
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "entity-profile.schema.json",
+  "title": "Entity Profile",
+  "description": "Output of seo-brand-foundation. Every factual field is a provenance-tagged value (see scripts/provenance.py).",
+  "type": "object",
+  "required": ["brand", "domain", "central_entity", "source_context", "central_intent", "generated"],
+  "additionalProperties": false,
+  "definitions": {
+    "pvalue": {
+      "type": "object",
+      "required": ["value", "provenance"],
+      "properties": {
+        "value": {},
+        "provenance": {"enum": ["measured", "derived", "asserted"]},
+        "source": {"type": "string"},
+        "observed": {"type": "string"},
+        "inputs": {"type": "array", "items": {"type": "string"}},
+        "method": {"type": ["string", "null"]},
+        "note": {"type": ["string", "null"]}
+      }
+    }
+  },
+  "properties": {
+    "brand": {"type": "string"},
+    "domain": {"type": "string"},
+    "generated": {"type": "string", "description": "ISO date"},
+    "central_entity": {
+      "type": "object",
+      "required": ["name", "type"],
+      "properties": {
+        "name": {"type": "string"},
+        "type": {"type": "string", "description": "e.g. product, service, org, place"},
+        "wikidata_qid": {"type": ["string", "null"]},
+        "typing": {"$ref": "#/definitions/pvalue"}
+      }
+    },
+    "source_context": {
+      "type": "object",
+      "description": "What the brand is, for whom, and how it makes money. Constrains the map.",
+      "required": ["what", "audience", "monetization"],
+      "properties": {
+        "what": {"type": "string"},
+        "audience": {"type": "array", "items": {"type": "string"}},
+        "monetization": {"type": "string"},
+        "will_not_cover": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "central_intent": {"type": "string", "description": "The primary search intent the brand exists to satisfy"},
+    "core_outer_boundary": {
+      "type": "object",
+      "description": "Rule that separates monetizable core topics from authority-feeder outer topics.",
+      "properties": {
+        "core_definition": {"type": "string"},
+        "outer_definition": {"type": "string"}
+      }
+    },
+    "personas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "needs"],
+        "properties": {
+          "name": {"type": "string"},
+          "needs": {"type": "array", "items": {"type": "string"}},
+          "sophistication": {"type": "string"}
+        }
+      }
+    },
+    "competitors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {"type": "string"},
+          "domain": {"type": ["string", "null"]},
+          "note": {"type": "string"},
+          "provenance": {"enum": ["measured", "derived", "asserted"]}
+        }
+      }
+    },
+    "attribute_inventory": {
+      "type": "array",
+      "description": "EAV of the brand's own offering. Values here that are factual must be provenance-tagged and mirrored into locked-facts.json.",
+      "items": {
+        "type": "object",
+        "required": ["attribute"],
+        "properties": {
+          "attribute": {"type": "string"},
+          "attr_type": {"enum": ["defining", "unique", "rare", "common"]},
+          "value": {"$ref": "#/definitions/pvalue"}
+        }
+      }
+    }
+  }
+}

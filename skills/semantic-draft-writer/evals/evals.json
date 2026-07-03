@@ -1,0 +1,3 @@
+{"skill_name":"semantic-draft-writer","evals":[
+ {"id":1,"prompt":"Write the article from the 'how to make pour-over coffee' brief for driftroast.","expected_output":"A draft with valid front-matter that passes validate_draft.py (0 high violations): definition-first, question H2s answered, no naked stats, no brand claim outside locked-facts.","assertions":[{"text":"validate_draft.py returns 0 high-severity violations","name":"validator_clean"},{"text":"front-matter locked_facts_used and sources reflect the body","name":"frontmatter_accurate"},{"text":"any external stat has a citation","name":"stats_cited"},{"text":"no unverified brand claim appears","name":"no_brand_fab"}]}
+]}

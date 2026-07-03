@@ -1,0 +1,3 @@
+{"skill_name":"semantic-site-auditor","evals":[
+ {"id":1,"prompt":"Audit driftroast.com against its topical map and tell me what's missing and what's competing.","expected_output":"An audit report with coverage gaps, cannibalization, entity drift, orphans, micro-issues, each provenance-tagged, plus a prioritised action list; map statuses updated.","assertions":[{"text":"report includes all five finding types","name":"all_finding_types"},{"text":"each finding is provenance-tagged (measured/derived)","name":"provenance"},{"text":"at least one finding is hand-verifiable (true gap or true cannibalization)","name":"verifiable"},{"text":"no fabricated scores (drift/cannibalization derived or asserted)","name":"no_fake_scores"}]}
+]}

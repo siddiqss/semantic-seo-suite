@@ -1,0 +1,349 @@
+{
+  "central_entity": {
+    "name": "specialty coffee",
+    "type": "product category"
+  },
+  "generated": "2026-07-02",
+  "grounding_tier": "t0",
+  "nodes": [
+    {
+      "id": "n-001",
+      "title": "Coffee brewing methods",
+      "tier": "pillar",
+      "section": "core",
+      "parent": null,
+      "target_query": "coffee brewing methods",
+      "query_network": [
+        {
+          "query": "how to brew coffee",
+          "provenance": "asserted"
+        },
+        {
+          "query": "best coffee brewing method",
+          "provenance": "asserted"
+        },
+        {
+          "query": "brewing guide",
+          "provenance": "asserted"
+        }
+      ],
+      "intent": "informational",
+      "intent_provenance": "asserted",
+      "entities": [
+        {
+          "entity": "coffee brewing",
+          "attributes": [
+            "methods",
+            "extraction"
+          ]
+        }
+      ],
+      "volume": null,
+      "difficulty": null,
+      "priority_score": null,
+      "status": "planned",
+      "url": null,
+      "internal_links": {
+        "up": [],
+        "down": [
+          "n-002",
+          "n-003",
+          "n-004"
+        ],
+        "lateral": []
+      }
+    },
+    {
+      "id": "n-002",
+      "title": "How to make pour-over coffee",
+      "tier": "cluster",
+      "section": "core",
+      "parent": "n-001",
+      "target_query": "how to make pour over coffee",
+      "query_network": [
+        {
+          "query": "v60 vs chemex",
+          "provenance": "asserted"
+        },
+        {
+          "query": "pour over ratio",
+          "provenance": "asserted"
+        },
+        {
+          "query": "bloom time",
+          "provenance": "asserted"
+        }
+      ],
+      "intent": "informational",
+      "intent_provenance": "asserted",
+      "entities": [],
+      "volume": null,
+      "difficulty": null,
+      "priority_score": null,
+      "status": "drafted",
+      "url": null,
+      "internal_links": {
+        "up": [
+          "n-001"
+        ],
+        "down": [],
+        "lateral": []
+      }
+    },
+    {
+      "id": "n-003",
+      "title": "Espresso brewing basics",
+      "tier": "cluster",
+      "section": "core",
+      "parent": "n-001",
+      "target_query": "how to brew espresso",
+      "query_network": [
+        {
+          "query": "espresso grind size",
+          "provenance": "asserted"
+        },
+        {
+          "query": "9 bar pressure",
+          "provenance": "asserted"
+        },
+        {
+          "query": "dose ratio espresso",
+          "provenance": "asserted"
+        }
+      ],
+      "intent": "informational",
+      "intent_provenance": "asserted",
+      "entities": [],
+      "volume": null,
+      "difficulty": null,
+      "priority_score": null,
+      "status": "planned",
+      "url": null,
+      "internal_links": {
+        "up": [
+          "n-001"
+        ],
+        "down": [],
+        "lateral": []
+      }
+    },
+    {
+      "id": "n-004",
+      "title": "Sour espresso: causes and fixes",
+      "tier": "supporting",
+      "section": "core",
+      "parent": "n-001",
+      "target_query": "why is my espresso sour",
+      "query_network": [
+        {
+          "query": "under extraction espresso",
+          "provenance": "asserted"
+        },
+        {
+          "query": "fix sour shot",
+          "provenance": "asserted"
+        }
+      ],
+      "intent": "informational",
+      "intent_provenance": "asserted",
+      "entities": [],
+      "volume": null,
+      "difficulty": null,
+      "priority_score": null,
+      "status": "planned",
+      "url": null,
+      "internal_links": {
+        "up": [
+          "n-001"
+        ],
+        "down": [],
+        "lateral": []
+      }
+    },
+    {
+      "id": "n-005",
+      "title": "Buying specialty coffee beans",
+      "tier": "pillar",
+      "section": "core",
+      "parent": null,
+      "target_query": "best specialty coffee beans",
+      "query_network": [
+        {
+          "query": "single origin beans",
+          "provenance": "asserted"
+        },
+        {
+          "query": "how to choose coffee beans",
+          "provenance": "asserted"
+        },
+        {
+          "query": "best coffee subscription",
+          "provenance": "asserted"
+        }
+      ],
+      "intent": "commercial",
+      "intent_provenance": "asserted",
+      "entities": [
+        {
+          "entity": "coffee beans",
+          "attributes": [
+            "origin",
+            "roast",
+            "freshness"
+          ]
+        }
+      ],
+      "volume": null,
+      "difficulty": null,
+      "priority_score": null,
+      "status": "planned",
+      "url": null,
+      "internal_links": {
+        "up": [],
+        "down": [
+          "n-006",
+          "n-007"
+        ],
+        "lateral": []
+      }
+    },
+    {
+      "id": "n-006",
+      "title": "Single-origin vs blend",
+      "tier": "cluster",
+      "section": "core",
+      "parent": "n-005",
+      "target_query": "single origin vs blend",
+      "query_network": [
+        {
+          "query": "single origin meaning",
+          "provenance": "asserted"
+        },
+        {
+          "query": "blend vs single origin coffee",
+          "provenance": "asserted"
+        }
+      ],
+      "intent": "commercial",
+      "intent_provenance": "asserted",
+      "entities": [],
+      "volume": null,
+      "difficulty": null,
+      "priority_score": null,
+      "status": "planned",
+      "url": null,
+      "internal_links": {
+        "up": [
+          "n-005"
+        ],
+        "down": [],
+        "lateral": []
+      }
+    },
+    {
+      "id": "n-007",
+      "title": "Coffee subscription value",
+      "tier": "cluster",
+      "section": "core",
+      "parent": "n-005",
+      "target_query": "coffee subscription worth it",
+      "query_network": [
+        {
+          "query": "best coffee subscription",
+          "provenance": "asserted"
+        },
+        {
+          "query": "is a coffee subscription worth it",
+          "provenance": "asserted"
+        }
+      ],
+      "intent": "commercial",
+      "intent_provenance": "asserted",
+      "entities": [],
+      "volume": null,
+      "difficulty": null,
+      "priority_score": null,
+      "status": "planned",
+      "url": null,
+      "internal_links": {
+        "up": [
+          "n-005"
+        ],
+        "down": [],
+        "lateral": []
+      }
+    },
+    {
+      "id": "n-008",
+      "title": "Coffee origin and terroir",
+      "tier": "pillar",
+      "section": "outer",
+      "parent": null,
+      "target_query": "coffee origin terroir",
+      "query_network": [
+        {
+          "query": "coffee growing regions",
+          "provenance": "asserted"
+        },
+        {
+          "query": "how terroir affects coffee flavor",
+          "provenance": "asserted"
+        }
+      ],
+      "intent": "informational",
+      "intent_provenance": "asserted",
+      "entities": [
+        {
+          "entity": "coffee origin",
+          "attributes": [
+            "region",
+            "terroir"
+          ]
+        }
+      ],
+      "volume": null,
+      "difficulty": null,
+      "priority_score": null,
+      "status": "planned",
+      "url": null,
+      "internal_links": {
+        "up": [],
+        "down": [
+          "n-009"
+        ],
+        "lateral": []
+      }
+    },
+    {
+      "id": "n-009",
+      "title": "How growing region affects flavor",
+      "tier": "cluster",
+      "section": "outer",
+      "parent": "n-008",
+      "target_query": "coffee region flavor",
+      "query_network": [
+        {
+          "query": "ethiopian vs colombian coffee flavor",
+          "provenance": "asserted"
+        }
+      ],
+      "intent": "informational",
+      "intent_provenance": "asserted",
+      "entities": [],
+      "volume": null,
+      "difficulty": null,
+      "priority_score": null,
+      "status": "planned",
+      "url": null,
+      "internal_links": {
+        "up": [
+          "n-008"
+        ],
+        "down": [],
+        "lateral": [
+          "n-005"
+        ]
+      }
+    }
+  ]
+}

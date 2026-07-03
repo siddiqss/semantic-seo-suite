@@ -1,0 +1,19 @@
+{
+  "node_id": "n-002",
+  "target_query": "how to make pour over coffee",
+  "intent": "informational",
+  "generated": "2026-07-04",
+  "snippet_target": "To make pour-over coffee: grind 60 g of coffee per litre to a medium-fine texture, wet the filter, add grounds, bloom for 30-45 seconds, then pour in slow spirals at 195-205°F until you hit your target weight — about three minutes total.",
+  "outline": [
+    {"heading": "What is pour-over coffee?", "level": "H2"},
+    {"heading": "What you need", "level": "H2"},
+    {"heading": "How do you make pour-over coffee, step by step?", "level": "H2"},
+    {"heading": "Why does the bloom matter?", "level": "H2"},
+    {"heading": "How do you fix a bad pour-over?", "level": "H2"}
+  ],
+  "entities_required": ["pour-over coffee", "bloom", "brew ratio", "grind size", "water temperature"],
+  "internal_links": {"up": ["n-001"], "down": [], "lateral": []},
+  "locked_facts_refs": ["brew.ratio", "brew.water_temp", "brew.grind", "brew.bloom", "brand.freshness"],
+  "do_not_fabricate": ["Exact extraction percentages", "Any specific bean's tasting notes without a source"],
+  "intent_conflicts": []
+}

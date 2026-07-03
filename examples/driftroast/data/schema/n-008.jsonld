@@ -1,0 +1,9 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "name": "Coffee origin and terroir",
+  "url": "https://driftroast.com/n-008",
+  "about": [
+    "coffee origin"
+  ]
+}

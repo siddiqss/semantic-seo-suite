@@ -1,0 +1,198 @@
+{
+  "plan": [
+    {
+      "id": "n-001",
+      "title": "Coffee brewing methods",
+      "up": [],
+      "down": [
+        {
+          "target": "n-002",
+          "to": "How to make pour-over coffee",
+          "anchors": [
+            "How to make pour-over coffee",
+            "v60 vs chemex",
+            "pour over ratio"
+          ]
+        },
+        {
+          "target": "n-003",
+          "to": "Espresso brewing basics",
+          "anchors": [
+            "Espresso brewing basics",
+            "espresso grind size",
+            "9 bar pressure"
+          ]
+        },
+        {
+          "target": "n-004",
+          "to": "Sour espresso: causes and fixes",
+          "anchors": [
+            "Sour espresso: causes and fixes",
+            "under extraction espresso",
+            "fix sour shot"
+          ]
+        }
+      ],
+      "lateral": []
+    },
+    {
+      "id": "n-002",
+      "title": "How to make pour-over coffee",
+      "up": [
+        {
+          "target": "n-001",
+          "to": "Coffee brewing methods",
+          "anchors": [
+            "Coffee brewing methods",
+            "how to brew coffee",
+            "best coffee brewing method"
+          ]
+        }
+      ],
+      "down": [],
+      "lateral": []
+    },
+    {
+      "id": "n-003",
+      "title": "Espresso brewing basics",
+      "up": [
+        {
+          "target": "n-001",
+          "to": "Coffee brewing methods",
+          "anchors": [
+            "Coffee brewing methods",
+            "how to brew coffee",
+            "best coffee brewing method"
+          ]
+        }
+      ],
+      "down": [],
+      "lateral": []
+    },
+    {
+      "id": "n-004",
+      "title": "Sour espresso: causes and fixes",
+      "up": [
+        {
+          "target": "n-001",
+          "to": "Coffee brewing methods",
+          "anchors": [
+            "Coffee brewing methods",
+            "how to brew coffee",
+            "best coffee brewing method"
+          ]
+        }
+      ],
+      "down": [],
+      "lateral": []
+    },
+    {
+      "id": "n-005",
+      "title": "Buying specialty coffee beans",
+      "up": [],
+      "down": [
+        {
+          "target": "n-006",
+          "to": "Single-origin vs blend",
+          "anchors": [
+            "Single-origin vs blend",
+            "single origin meaning",
+            "blend vs single origin coffee"
+          ]
+        },
+        {
+          "target": "n-007",
+          "to": "Coffee subscription value",
+          "anchors": [
+            "Coffee subscription value",
+            "best coffee subscription",
+            "is a coffee subscription worth it"
+          ]
+        }
+      ],
+      "lateral": []
+    },
+    {
+      "id": "n-006",
+      "title": "Single-origin vs blend",
+      "up": [
+        {
+          "target": "n-005",
+          "to": "Buying specialty coffee beans",
+          "anchors": [
+            "Buying specialty coffee beans",
+            "single origin beans",
+            "how to choose coffee beans"
+          ]
+        }
+      ],
+      "down": [],
+      "lateral": []
+    },
+    {
+      "id": "n-007",
+      "title": "Coffee subscription value",
+      "up": [
+        {
+          "target": "n-005",
+          "to": "Buying specialty coffee beans",
+          "anchors": [
+            "Buying specialty coffee beans",
+            "single origin beans",
+            "how to choose coffee beans"
+          ]
+        }
+      ],
+      "down": [],
+      "lateral": []
+    },
+    {
+      "id": "n-008",
+      "title": "Coffee origin and terroir",
+      "up": [],
+      "down": [
+        {
+          "target": "n-009",
+          "to": "How growing region affects flavor",
+          "anchors": [
+            "How growing region affects flavor",
+            "ethiopian vs colombian coffee flavor"
+          ]
+        }
+      ],
+      "lateral": []
+    },
+    {
+      "id": "n-009",
+      "title": "How growing region affects flavor",
+      "up": [
+        {
+          "target": "n-008",
+          "to": "Coffee origin and terroir",
+          "anchors": [
+            "Coffee origin and terroir",
+            "coffee growing regions",
+            "how terroir affects coffee flavor"
+          ]
+        }
+      ],
+      "down": [],
+      "lateral": [
+        {
+          "target": "n-005",
+          "to": "Buying specialty coffee beans",
+          "anchors": [
+            "Buying specialty coffee beans",
+            "single origin beans",
+            "how to choose coffee beans"
+          ],
+          "justification": "shared attribute / next-question (asserted)",
+          "provenance": "asserted"
+        }
+      ]
+    }
+  ],
+  "orphans": [],
+  "over_linked": [],
+  "real_orphans": []
+}
