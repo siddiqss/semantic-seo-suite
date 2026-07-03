@@ -2,7 +2,11 @@
 
 **A free, open-source alternative to Surfer, MarketMuse, Clearscope & Frase — built as Claude Code skills. Topical authority, content briefs, AI writing, schema, GEO, and backlinks. With a fabrication guard that refuses to invent numbers.**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](./LICENSE) · Free forever · Runs in [Claude Code](https://claude.com/claude-code) · No SaaS, no seat fees
+<p align="center">
+  <img src="assets/overview.svg" alt="Semantic SEO Suite — entity-based topical map, entity-aware briefs, fabrication-guarded AI drafts, schema, GEO, and backlinks; every number tagged measured / derived / asserted" width="900">
+</p>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](./LICENSE) · Free forever · [![Runs in Claude Code](https://img.shields.io/badge/Runs%20in-Claude%20Code-D97757?logo=claude&logoColor=white)](https://claude.com/claude-code) · No SaaS, no seat fees
 
 Paid "AI SEO platforms" cost $50–$1,000+/month and quietly fabricate: made-up search volumes, invented "content scores," hallucinated product claims. This suite does the same jobs — **entity-based topical mapping, content-gap analysis, keyword clustering, content briefs, on-page optimization, internal linking, schema markup, rank tracking, and answer-engine optimization** — as skills you run inside Claude Code, for free, with the provenance of every number tagged and a guard that blocks any claim that isn't grounded.
 

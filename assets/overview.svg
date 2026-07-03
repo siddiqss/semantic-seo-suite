@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+  <rect width="1200" height="440" rx="16" fill="#0d1117"/>
+  <!-- title -->
+  <text x="40" y="48" fill="#e6edf3" font-size="26" font-weight="700">Semantic SEO Suite</text>
+  <text x="40" y="74" fill="#8b949e" font-size="15">Grounded semantic SEO · GEO · off-page — as Claude Code skills</text>
+
+  <!-- entity / topical-map graph -->
+  <g stroke="#30363d" stroke-width="2">
+    <line x1="190" y1="230" x2="110" y2="165"/>
+    <line x1="190" y1="230" x2="120" y2="300"/>
+    <line x1="190" y1="230" x2="300" y2="210"/>
+    <line x1="110" y1="165" x2="70" y2="120"/>
+    <line x1="110" y1="165" x2="150" y2="110"/>
+    <line x1="120" y1="300" x2="80" y2="345"/>
+    <line x1="120" y1="300" x2="165" y2="350"/>
+    <line x1="300" y1="210" x2="345" y2="170"/>
+    <line x1="300" y1="210" x2="350" y2="250"/>
+  </g>
+  <!-- clusters -->
+  <g fill="#58a6ff">
+    <circle cx="70" cy="120" r="7"/><circle cx="150" cy="110" r="7"/>
+    <circle cx="80" cy="345" r="7"/><circle cx="165" cy="350" r="7"/>
+    <circle cx="345" cy="170" r="7"/><circle cx="350" cy="250" r="7"/>
+  </g>
+  <!-- pillars -->
+  <g fill="#1f6feb">
+    <circle cx="110" cy="165" r="13"/><circle cx="120" cy="300" r="13"/><circle cx="300" cy="210" r="13"/>
+  </g>
+  <!-- central entity -->
+  <circle cx="190" cy="230" r="30" fill="#D97757"/>
+  <text x="190" y="226" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">central</text>
+  <text x="190" y="240" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">entity</text>
+  <text x="205" y="400" fill="#8b949e" font-size="14" text-anchor="middle">Entity-based topical map</text>
+
+  <!-- feature chips -->
+  <g font-size="14.5" fill="#e6edf3">
+    <g>
+      <rect x="430" y="96"  width="232" height="52" rx="9" fill="#161b22" stroke="#30363d"/>
+      <text x="450" y="127">🗺️  Topical map + calendar</text>
+    </g>
+    <g>
+      <rect x="686" y="96"  width="232" height="52" rx="9" fill="#161b22" stroke="#30363d"/>
+      <text x="706" y="127">📝  Entity-aware briefs</text>
+    </g>
+    <g>
+      <rect x="942" y="96"  width="222" height="52" rx="9" fill="#161b22" stroke="#30363d"/>
+      <text x="962" y="127">✍️  Guarded AI drafts</text>
+    </g>
+    <g>
+      <rect x="430" y="160" width="232" height="52" rx="9" fill="#161b22" stroke="#30363d"/>
+      <text x="450" y="191">🛡️  Fabrication guard</text>
+    </g>
+    <g>
+      <rect x="686" y="160" width="232" height="52" rx="9" fill="#161b22" stroke="#30363d"/>
+      <text x="706" y="191">🏷️  Schema / JSON-LD</text>
+    </g>
+    <g>
+      <rect x="942" y="160" width="222" height="52" rx="9" fill="#161b22" stroke="#30363d"/>
+      <text x="962" y="191">🔗  Internal linking</text>
+    </g>
+    <g>
+      <rect x="430" y="224" width="232" height="52" rx="9" fill="#161b22" stroke="#30363d"/>
+      <text x="450" y="255">🔍  Gap & cannibal. audit</text>
+    </g>
+    <g>
+      <rect x="686" y="224" width="232" height="52" rx="9" fill="#161b22" stroke="#30363d"/>
+      <text x="706" y="255">🤖  GEO — AI citations</text>
+    </g>
+    <g>
+      <rect x="942" y="224" width="222" height="52" rx="9" fill="#161b22" stroke="#30363d"/>
+      <text x="962" y="255">🎯  Backlinks + distribution</text>
+    </g>
+  </g>
+
+  <!-- provenance band -->
+  <rect x="430" y="300" width="734" height="46" rx="9" fill="#11261b" stroke="#238636"/>
+  <text x="797" y="329" text-anchor="middle" font-size="14.5" fill="#e6edf3">
+    Every number tagged <tspan fill="#3fb950" font-weight="700">measured · derived · asserted</tspan> — no fabricated metrics
+  </text>
+
+  <text x="430" y="392" fill="#8b949e" font-size="13">Free &amp; MIT · runs in Claude Code · your data stays local</text>
+</svg>
