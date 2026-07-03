@@ -100,7 +100,7 @@ TESTING.md    how to verify the suite yourself
 See [TESTING.md](./TESTING.md) — every non-trivial script ships a runnable `--selftest`, because a tool about honesty should prove its own.
 
 ## About
-Built by **Talha** — I build grounded, no-nonsense AI systems ([atelic.ai](https://atelic.ai)). This suite is free and MIT-licensed; use it for your own brand, client work, or ventures. Issues and PRs welcome.
+Built by [Talha Siddique](https://linkedin.com/in/talha-siddique) — Senior Full Stack Engineer and I build grounded, no-nonsense production AI systems ([atelic.ai](https://atelic.ai)). This suite is free and MIT-licensed; use it for your own brand, client work, or ventures. Issues and PRs welcome.
 
 ## License
 [MIT](./LICENSE).
