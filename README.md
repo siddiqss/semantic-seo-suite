@@ -33,16 +33,21 @@ Clone it, open the folder in Claude Code, talk to it in plain English.
 
 ## What you can do
 
-- **Build topical authority** — generate a full pillar → cluster → supporting **topical map** with a prioritized **content calendar** from one central entity.
-- **Find content gaps & cannibalization** — audit any site against its map (coverage gaps, keyword cannibalization, entity drift, orphan pages).
-- **Cluster keywords into topics** and model your niche as **entities and attributes** (EAV), not a keyword list.
-- **Generate content briefs** — entity-aware outlines with snippet targets and internal-link targets.
-- **Write on-page-optimized drafts** that pass a **fabrication guard**, a **depth/quality score**, and an **AEO citation score** before they ship.
-- **Optimize internal linking & schema** — hub-and-spoke link plans with varied anchors + valid **JSON-LD** per page.
-- **Track rankings** from Google Search Console (striking-distance, decay, uncovered queries).
-- **Win AI answers (GEO)** — harden content to be cited by **ChatGPT, Perplexity, and Google AI Overviews**.
-- **Build backlinks** — prospect lists, competitor backlink-gap, and a penalty-safe anchor mix.
-- **Distribute & repurpose** — per-piece channel plans and repurposing atoms.
+- **Build topical authority** — a full pillar → cluster → supporting **topical map** + prioritized **content calendar** from one central entity (Koray-style, entity-based).
+- **Model your niche as entities** — **Entity-Attribute-Value (EAV)** architecture, not a flat keyword list, plus **keyword clustering** into topics.
+- **Generate content briefs** — semantically ordered H2/H3 outlines with snippet targets, required entities, internal-link targets, and **intent-conflict detection** before you write.
+- **Write drafts that clear 3 gates** — a **fabrication guard**, a **depth/quality score**, and an **AEO citation score**, every time.
+- **Audit any site** — content-gap analysis, **keyword cannibalization** and **entity-drift** detection (via **semantic distance / context vectors**), orphan pages, and a bulk-URL crawl.
+- **Analyze competitors** — model competitor entities and surface the topical + backlink gaps.
+- **Optimize internal linking & schema** — hub-and-spoke link plans with varied, penalty-safe anchors + valid **JSON-LD** per page.
+- **Scale with programmatic SEO** — entity-driven templates for pages at scale (e.g. per-vertical, per-integration).
+- **Track performance** — Google Search Console rollups, striking-distance queries, decay, and uncovered-query candidates.
+- **Win AI answers (GEO)** — harden content to be **cited by ChatGPT, Perplexity, and Google AI Overviews**.
+- **Grow off-page & distribute** — backlink prospecting, competitor backlink-gap, and per-piece channel + repurposing plans.
+- **See it all on a visual gap heatmap** — coverage, drafts, and gaps colour-coded at a glance.
+
+### Not included (yet — honestly)
+No Google Business Profile / local-SEO module, no dedicated multilingual mode (it's language-agnostic at T0 but not specialized), and exports are Markdown / JSON / HTML rather than one-click Notion / Sheets / PDF. And you won't find a "+312% traffic" claim anywhere — we don't publish outcome stats we can't attribute. PRs welcome.
 
 ## What you get (the actual deliverables)
 
