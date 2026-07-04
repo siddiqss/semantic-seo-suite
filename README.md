@@ -179,15 +179,21 @@ for s in aeo_score draft_quality link_prospects distribution_plan reprioritize_m
 
 Full instructions per tier: [RUNBOOK.md](./RUNBOOK.md). Verify the suite yourself: [TESTING.md](./TESTING.md).
 
-## Use it in the Claude apps (claude.ai / desktop)
+## Use it in the Claude apps (Desktop / web)
 
-Not a developer? Run the skills in the Claude web or desktop app — no clone needed:
+Not a developer? Run the skills in the Claude Desktop app — no clone, no CLI.
 
-1. Open the [latest release](https://github.com/siddiqss/semantic-seo-suite/releases/latest) and download **`semantic-seo-suite-skills.zip`** (all 10 skills), or grab individual `.skill` files.
-2. In Claude, go to **Settings → Capabilities → Skills** and upload each `.skill` package.
-3. Start a chat and ask the same things — *"Build a topical map for mydomain.com,"* *"write a brief and draft it,"* *"how do we get cited by ChatGPT?"*
+**Claude Desktop (easiest):** in a chat, click the **+** icon → **Add plugin** → **paste the repo URL**:
 
-> The app runs the skills' reasoning and the lighter scripts; the heavy steps (site crawl, embeddings, Search Console) need **Claude Code**, which can execute them directly. Same skills either way.
+```
+https://github.com/siddiqss/semantic-seo-suite
+```
+
+Claude reads the plugin, shows the 10 skills, and installs them. Then just ask — *"Build a topical map for mydomain.com,"* *"write a brief and draft it,"* *"how do we get cited by ChatGPT?"*
+
+**Alternative — upload skill packages** (e.g. claude.ai web, or org setups without plugin install): download the individual `.skill` files from the [latest release](https://github.com/siddiqss/semantic-seo-suite/releases/latest) and add each under **Settings → Capabilities → Skills**. (Custom Skills is a Pro/Max/Team/Enterprise feature.)
+
+> Either way, the apps run the skills' reasoning and lighter scripts; the heavy steps (site crawl, embeddings, Search Console) need **Claude Code**, which executes them directly against a real filesystem. Same skills.
 
 ## Repo layout
 
