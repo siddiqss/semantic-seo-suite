@@ -1,0 +1,47 @@
+name: Package skills
+
+# Rebuilds the .skill packages and attaches them to the release whenever you push a
+# version tag (e.g. `git tag v1.1.0 && git push --tags`). Keeps release assets in sync
+# with the skills/framework/scripts in the repo. Also runnable manually.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build .skill packages
+        run: |
+          set -euo pipefail
+          python scripts/build_skills.py
+          mkdir -p dist/packaged
+          cd dist
+          for d in */; do
+            name="${d%/}"
+            [ "$name" = "packaged" ] && continue
+            [ -f "$name/SKILL.md" ] || continue
+            zip -r -q "packaged/$name.skill" "$name" -x '*/evals/*'
+          done
+          ( cd packaged && zip -q ../semantic-seo-suite-skills.zip *.skill )
+          ls -1 packaged/*.skill
+
+      - name: Attach to release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TAG="${GITHUB_REF_NAME}"
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "$TAG — Semantic SEO Suite" --generate-notes
+          gh release upload "$TAG" dist/packaged/*.skill dist/semantic-seo-suite-skills.zip --clobber

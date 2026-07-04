@@ -1,0 +1,23 @@
+{
+  "name": "semantic-seo-suite",
+  "owner": {
+    "name": "Talha Siddique",
+    "url": "https://github.com/siddiqss"
+  },
+  "metadata": {
+    "description": "Grounded semantic SEO, GEO & off-page skills for Claude Code — with a fabrication guard.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "semantic-seo-suite",
+      "source": "./",
+      "description": "10 skills: entity-based topical maps, content briefs, fabrication-guarded AI drafts, schema/JSON-LD, site audits, GSC tracking, GEO (get cited by ChatGPT), backlinks, and distribution. Every number tagged measured/derived/asserted.",
+      "version": "1.0.0",
+      "author": { "name": "Talha Siddique", "url": "https://github.com/siddiqss" },
+      "homepage": "https://github.com/siddiqss/semantic-seo-suite",
+      "license": "MIT",
+      "keywords": ["seo", "semantic-seo", "aeo", "geo", "topical-authority", "content-marketing", "claude-skills"]
+    }
+  ]
+}

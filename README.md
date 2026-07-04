@@ -130,7 +130,14 @@ cp .env.example .env      # then paste your key into .env (git-ignored)
 claude            # or open the folder in the Claude Code desktop app
 ```
 
-Then just ask:
+**Or install as a plugin (one command, no clone):**
+
+```
+/plugin marketplace add siddiqss/semantic-seo-suite
+/plugin install semantic-seo-suite
+```
+
+Either way, then just ask:
 
 > "Set up the SEO foundation for `mydomain.com`." · "Build the topical map." ·
 > "Write a brief for X, then draft it." · "Audit my site." · "How do we get cited by ChatGPT?"
