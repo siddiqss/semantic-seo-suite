@@ -99,11 +99,34 @@ Every number the suite emits is tagged `measured`, `derived`, or `asserted`. A b
 
 Keys live only in a git-ignored `.env` (copy `.env.example`) — they never enter the repo.
 
-## Quickstart (Claude Code)
+## Quickstart
 
 ```bash
 git clone https://github.com/siddiqss/semantic-seo-suite.git
 cd semantic-seo-suite
+```
+
+### 1. Install dependencies
+
+Python 3.10+ required. T0 (the full methodology) needs almost nothing:
+
+```bash
+# T0 — required minimum (no accounts, no keys):
+pip install jsonschema pyyaml
+
+# T1 — optional (embeddings for cannibalization/drift, site crawl, Search Console):
+pip install sentence-transformers trafilatura pytrends beautifulsoup4 \
+            google-api-python-client google-auth-oauthlib
+
+# T2 — optional (live SERP data): nothing to install — just add SERPAPI_KEY:
+cp .env.example .env      # then paste your key into .env (git-ignored)
+```
+
+> On an externally-managed Python (Homebrew/Debian) add `--break-system-packages`, or use a venv: `python -m venv .venv && source .venv/bin/activate`.
+
+### 2. Use it in Claude Code
+
+```bash
 claude            # or open the folder in the Claude Code desktop app
 ```
 
@@ -112,11 +135,28 @@ Then just ask:
 > "Set up the SEO foundation for `mydomain.com`." · "Build the topical map." ·
 > "Write a brief for X, then draft it." · "Audit my site." · "How do we get cited by ChatGPT?"
 
-### Try it now (offline, no keys — bundled demo)
+The skills write everything into your brand workspace (`brands/<your-slug>/`).
+
+### 3. Open the topical map & heatmap
+
+The map ships as JSON + a readable Markdown tree; the **heatmap** is a self-contained HTML file you render, then open in any browser. Using the bundled demo:
 
 ```bash
-pip install jsonschema pyyaml --break-system-packages
+# the topical map as a readable tree — open in any editor
+open examples/driftroast/topical-map.md          # macOS   (Linux: xdg-open · Windows: start)
 
+# render the visual coverage heatmap, then open it
+python scripts/map_heatmap.py \
+  --map examples/driftroast/topical-map.json \
+  --out examples/driftroast/audits/heatmap.html
+open examples/driftroast/audits/heatmap.html     # macOS   (Linux: xdg-open · Windows: start)
+```
+
+For your own brand, swap `examples/driftroast` → `brands/<your-slug>`.
+
+### Try it now (offline scorers + self-tests)
+
+```bash
 # fabrication guard on the demo draft → CLEAN
 python scripts/validate_draft.py \
   --draft examples/driftroast/drafts/how-to-make-pour-over-coffee.md \
@@ -125,9 +165,6 @@ python scripts/validate_draft.py \
 # quality + AEO scorers
 python scripts/draft_quality.py --draft examples/driftroast/drafts/how-to-make-pour-over-coffee.md --floor 700
 python scripts/aeo_score.py     --draft examples/driftroast/drafts/how-to-make-pour-over-coffee.md
-
-# open the visual coverage heatmap
-python scripts/map_heatmap.py --map examples/driftroast/topical-map.json --out /tmp/heatmap.html && open /tmp/heatmap.html
 
 # every script's self-test
 for s in aeo_score draft_quality link_prospects distribution_plan reprioritize_map serpapi_client provenance; do python scripts/$s.py --selftest; done
